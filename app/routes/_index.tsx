@@ -10,11 +10,8 @@ export const meta: MetaFunction = () => {
 };
 
 export const loader: LoaderFunction = async ({ request }) => {
-  const url = new URL(request.url);
-  const apiUrl = `${url.origin}/api/sanity`;
-  
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(request.url.replace(/\/?$/, '/api/sanity'));
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
