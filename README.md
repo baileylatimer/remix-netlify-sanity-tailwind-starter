@@ -10,7 +10,7 @@ Before you begin, ensure you have installed:
 - [VS Code](https://code.visualstudio.com/) (recommended editor)
 - [Git](https://git-scm.com/)
 
-## COPY HERE
+## COPY AND PASTE THIS INTO CLINE FOR STARTING PROMPT
 
 ```
 I want to set up a new project using the Remix-Netlify-Sanity-Tailwind starter. I'll need help with:
@@ -19,6 +19,23 @@ I want to set up a new project using the Remix-Netlify-Sanity-Tailwind starter. 
 3. Setting up Git for version control
 4. Deploying to Netlify
 ```
+
+
+## EXAMPLE MESSAGE FOR CLINE ONCE YOU GET RUNNING
+```
+Ok create a new component called process that’s populated by sanity. It should have 3 cards that stack on mobile.
+
+there should be an image upload field for the icons, an h2 (title), and p (description). 
+
+there should be an hr in between the title and description.
+
+the first card should have the colors inverted with the background as our primary color.
+
+here’s the primary color if you want to create a variable #17283D.
+
+see the mockup attached.
+```
+
 
 ## Getting Started
 
