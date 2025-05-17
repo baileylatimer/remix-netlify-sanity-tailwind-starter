@@ -2,10 +2,10 @@ import { json } from "@remix-run/node";
 import { createClient } from '@sanity/client';
 
 const sanityClient = createClient({
-  projectId: process.env.SANITY_PROJECT_ID || 'uxddufsz',
-  dataset: process.env.SANITY_DATASET || 'production',
+  projectId: process.env.SANITY_PROJECT_ID || 'YOUR_SANITY_PROJECT_ID',
+  dataset: process.env.SANITY_DATASET || 'YOUR_SANITY_DATASET',
   useCdn: process.env.NODE_ENV === 'production',
-  apiVersion: '2023-05-03',
+  apiVersion: '2023-05-03', // Use current date in YYYY-MM-DD format
 });
 
 if (!sanityClient.config().projectId) {
@@ -49,7 +49,7 @@ export async function loader() {
     return json({
       error: 'Failed to fetch projects',
       details: error instanceof Error ? error.message : 'Unknown error occurred',
-      projectId: process.env.SANITY_PROJECT_ID || 'uxddufsz'
+      projectId: process.env.SANITY_PROJECT_ID || 'YOUR_SANITY_PROJECT_ID'
     }, { status: 500 });
   }
 }
